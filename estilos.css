@@ -1,0 +1,155 @@
+/** aqui eligo mi paleta de colores**/
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #a59494;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /**viene junto con el before y after**//
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }/**esto es para css box, que los padding no afecte a la totalidad de los hight**/
+body{
+    font-size: 16px;
+    background-image: linear-gradient(to top, #dfe9f3 0%, var(--blanco) 100% );
+}/**para que el fondo de toda la pagina sea gradiente**/
+.sombra{
+    -webkit-box-shadow: 6px 10px 22px -1px rgba(0,0,0,0.31);
+    -moz-box-shadow: 6px 10px 22px -1px rgba(0,0,0,0.31);
+    box-shadow: 6px 10px 22px -1px rgba(0,0,0,0.31);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}/**la sombra, color de fonto, y redondeo de la seccion de mis servicios**/
+
+/**abajo elijo la familia de fuente, tamano y estilo de los heading**/
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--negro);
+}
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--negro);
+}
+h3{
+    font-size: 1.8rem;
+    text-align: center;
+}
+span{
+    font-size: 1.8rem;
+    font-style: italic;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+}
+.boton{
+    background-color: #FF4500;
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}/**css del boton de contactar**/
+.contenedor{
+    width: 70rem;
+    margin: 0 auto 0 auto;
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal{
+    display: flex;
+    justify-content: space-between;
+}
+.navegacion-principal a {
+    padding: 1rem;
+    color:var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}/**estilos para los enlaces del menu**/
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--negro);
+}/**estilo para cuando el punte se posicione encima del enlace de menu**/
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 2rem;
+}/**estilo para la imagen de fondo**/
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 80, 89, .7);
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}/**estilo para la capa superpuesta de la imagen de fondo**/
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+/**css grid para hacer la seccion de servicios en columnas**/
+.servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;/**como el padding pero de las columnas**/
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+.servicio p{
+    line-height: 2;
+    text-align: justify;
+}
+.servicio .icons{
+    height: 10rem;
+    width: 10rem;
+    background-color: #FF4500;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    background-color: #5fb5be;
+    padding: 3rem;
+    margin-top: 3rem;
+}
+.footer p{
+    text-align: center;
+}
+.contenido-pgservicios{
+    height: 40rem;
+}
+.contenido-pgservicios p{
+    text-align: center;
+}
